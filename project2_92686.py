@@ -3,8 +3,8 @@ from itertools import combinations
 import pandas as pd
 
 
-gitRepoV0_0_0 = 'https://raw.githubusercontent.com/guilhermeAlmeida1/EnergyServices/fed1eea955e91f6225ee596cab001469986e4442'
-assets = f'{gitRepoV0_0_0}/assets'
+gitRepoV0_1_0 = 'https://raw.githubusercontent.com/guilhermeAlmeida1/EnergyServices/33b3e5178b17886d6841a1cd307ebc42d90ea170'
+assets = f'{gitRepoV0_1_0}/assets'
 
 df_metrics= pd.read_csv(f'{assets}/metrics.csv').set_index('index')
 
@@ -85,7 +85,7 @@ app.layout = html.Div(children=[
         ], style={'width': '100%', 'display': 'flex', 'flex-direction': 'row'}),
         
         html.Div(children=[dcc.Markdown(middletext)], style={'width': '60%'}),
-        html.Img(id='vars', src=f'{assets}/params_scatter_plots.svg', width='100%')
+        html.Img(id='vars', src=f'{assets}/params_scatter_plots.png', width='100%')
     ], style={'width': '100%', 'display': 'inline', 'flex-direction': 'row', 'vertical-align': 'middle'})
 
 @app.callback(
