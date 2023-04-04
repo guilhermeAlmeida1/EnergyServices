@@ -54,6 +54,8 @@ def getMetrics(idx):
 
 
 app = Dash(__name__)
+server = app.server
+
 app.layout = html.Div(children=[
         html.Div(children=[dcc.Markdown(children=header)], style={'width': '60%'}),
 
